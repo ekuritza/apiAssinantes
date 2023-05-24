@@ -1,0 +1,25 @@
+[
+    {
+      "id": 1,
+      "nome": "Eduardo",
+      "sobrenome": "Kuritza",
+      "dataNascimento": "29/10/2001", //ver exemplo de data em node
+      "telefone": "41-99999-9999",
+      "enedereço": "Waldemiro Ry 993",
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "status": true
+    },
+    {
+        "id": 2,
+        "nome": "Rafael",
+        "sobrenome": "de Angelo",
+        "dataNascimento": "", //ver exemplo de data em node
+        "telefone": "41-99999-9999",
+        "enedereço": "",
+        "cidade": "Pinhais",
+        "estado": "PR",
+        "status": true
+      }
+] 
+//add mais uns 4 exemplos
