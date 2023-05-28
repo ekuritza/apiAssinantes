@@ -9,7 +9,7 @@ async function carregarDados() {
         for (const assinante of assinantes) {
             await assinanteModel.create(assinante);
         }
-        console.log("Carga de assinantes feita!");
+        console.log("Carga de assinantes realizada!");
     } catch (err) {
         console.log(err);
     } finally {

@@ -2,10 +2,9 @@ const express = require('express');
 const router = express.Router();
 const assinanteController = require('../controllers/assinanteController');
 
-router.post('/criaAssinante', assinanteController.criar);
-router.get('/assinantes', assinanteController.listar);
-router.get('/:id', assinanteController.buscarPorId);
-router.put('/:id', assinanteController.atualizar);
-router.delete('/:id', assinanteController.excluir);
+router.get('/assinantes', assinanteController.listarUsuarios);
+router.get('/:id', assinanteController.listarUsuarioPorCodigo);
+router.put('/:id', assinanteController.listarUsuariosPorFiltro);
+router.delete('/:id', assinanteController.deletarUsuario);
 
 module.exports = router;

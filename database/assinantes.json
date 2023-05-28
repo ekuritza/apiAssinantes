@@ -3,9 +3,9 @@
       "id": 1,
       "nome": "Eduardo",
       "sobrenome": "Kuritza",
-      "dataNascimento": "29/10/2001", //ver exemplo de data em node
+      "dataNascimento": "29/10/2001", 
       "telefone": "41-99999-9999",
-      "enedereço": "Waldemiro Ry 993",
+      "endereco": "Waldemiro Ry 993",
       "cidade": "Curitiba",
       "estado": "PR",
       "status": true
@@ -14,12 +14,55 @@
         "id": 2,
         "nome": "Rafael",
         "sobrenome": "de Angelo",
-        "dataNascimento": "", //ver exemplo de data em node
+        "dataNascimento": "03/04/1994", 
         "telefone": "41-99999-9999",
-        "enedereço": "",
+        "endereco": "Rodovia João Leopoldo Jacomel 13328",
         "cidade": "Pinhais",
+        "estado": "PR",
+        "status": true
+      },
+      {
+        "id": 3,
+        "nome": "Luiz",
+        "sobrenome": "Eduardo Oku",
+        "dataNascimento": "20/12/1996", 
+        "telefone": "41-99999-9999",
+        "endereco": "Travessa São José 33",
+        "cidade": "Piraquara",
+        "estado": "PR",
+        "status": true
+      },
+      {
+        "id": 4,
+        "nome": "Sibele",
+        "sobrenome": "Marques Schmitz",
+        "dataNascimento": "25/04/1999", 
+        "telefone": "41-99999-9999",
+        "endereco": "Travessa São José 33",
+        "cidade": "Piraquara",
+        "estado": "PR",
+        "status": true
+      },
+      {
+        "id": 5,
+        "nome": "Elizandra",
+        "sobrenome": "Schmitz",
+        "dataNascimento": "01/01/1993", 
+        "telefone": "41-99999-9999",
+        "endereco": "Rua Padre Humbert Alfred Roebig 258",
+        "cidade": "Piraquara",
+        "estado": "PR",
+        "status": true
+      },
+      {
+        "id": 6,
+        "nome": "Raquel",
+        "sobrenome": "Akemi Oku",
+        "dataNascimento": "20/12/2003", 
+        "telefone": "41-99999-9999",
+        "endereco": "Avenida Iguaçu 3001",
+        "cidade": "Curitiba",
         "estado": "PR",
         "status": true
       }
 ] 
-//add mais uns 4 exemplos
