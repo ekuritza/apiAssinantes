@@ -13,7 +13,8 @@ const assinanteSchema = new mongoose.Schema({
     status: {
         type: String,
         enum: ['Ativo', 'Inativo']
-    }
+    },
+    imagem: Buffer
 });
 
 module.exports = mongoose.model('assinantes', assinanteSchema);

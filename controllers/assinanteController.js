@@ -1,13 +1,27 @@
 const assinanteModel = require('../models/assinanteModel');
+const multer = require('multer');
+const upload = multer();
 
 
 class AssinanteController {
 
   async criarAssinante(req, res) {
     try {
-      const novoAssinante = new assinanteModel(req.body);
-      await novoAssinante.save();
-      res.status(201).json(novoAssinante);
+      upload.single('imagem')(req, res, async function (err) {
+        if (err instanceof multer.MulterError) {
+          return res.status(500).json({ error: 'Erro ao fazer o upload da imagem' });
+        } else if (err) {
+          return res.status(500).json({ error: 'Erro ao criar assinante' });
+        }
+  
+        const imagem = req.file.buffer; 
+  
+        const novoAssinante = new assinanteModel(req.body);
+        novoAssinante.imagem = imagem; 
+  
+        await novoAssinante.save();
+        res.status(201).json(novoAssinante);
+      });
     } catch (error) {
       res.status(500).json({ error: 'Erro ao criar assinante' });
     }
@@ -78,7 +92,8 @@ class AssinanteController {
         bairro: req.body.bairro,
         cidade: req.body.cidade,
         estado: req.body.estado,
-        //ImagemPerfil: req.body.ImagemPerfil
+        status: req.body.status,
+        imagem: req.body.imagem
       };
       await assinanteModel.findByIdAndUpdate(_id, dadosAtualizados);
       res.status(200).send();
