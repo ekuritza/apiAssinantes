@@ -5,12 +5,15 @@ const assinanteSchema = new mongoose.Schema({
     nome: String,
     sobrenome: String,
     dataNascimento: String,
-    telefone: Number,
+    telefone: String,
     endereco: String,
     bairro: String,
     cidade: String,
     estado: String,
-    status: Boolean
+    status: {
+        type: String,
+        enum: ['Ativo', 'Inativo']
+    }
 });
 
 module.exports = mongoose.model('assinantes', assinanteSchema);

@@ -8,7 +8,7 @@
       "endereco": "Waldemiro Ry 993",
       "cidade": "Curitiba",
       "estado": "PR",
-      "status": true
+      "status": "Ativo"
     },
     {
         "id": 2,
@@ -19,7 +19,7 @@
         "endereco": "Rodovia João Leopoldo Jacomel 13328",
         "cidade": "Pinhais",
         "estado": "PR",
-        "status": true
+        "status": "Ativo"
       },
       {
         "id": 3,
@@ -30,7 +30,7 @@
         "endereco": "Travessa São José 33",
         "cidade": "Piraquara",
         "estado": "PR",
-        "status": true
+        "status": "Ativo"
       },
       {
         "id": 4,
@@ -41,7 +41,7 @@
         "endereco": "Travessa São José 33",
         "cidade": "Piraquara",
         "estado": "PR",
-        "status": true
+        "status": "Ativo"
       },
       {
         "id": 5,
@@ -52,7 +52,7 @@
         "endereco": "Rua Padre Humbert Alfred Roebig 258",
         "cidade": "Piraquara",
         "estado": "PR",
-        "status": true
+        "status": "Ativo"
       },
       {
         "id": 6,
@@ -63,6 +63,6 @@
         "endereco": "Avenida Iguaçu 3001",
         "cidade": "Curitiba",
         "estado": "PR",
-        "status": true
+        "status": "Ativo"
       }
 ] 
