@@ -50,35 +50,75 @@ class AssinanteController {
         }
     };
 
-
-    async filtrarAssinante(req, res) {
+    async buscarAssinantePorNome(req, res) {
+      const nome = req.params.nome;
       try {
-        const { nome, sobrenome, cidade, estado, status } = req.query;
-    
-        const filtro = {};
-    
-        if (nome) {
-          filtro.nome = nome;
+        const assinante = await assinanteModel.findOne({ nome: nome });
+        if (assinante) {
+          res.status(200).json(assinante);
+        } else {
+          res.status(404).json({ erro: 'Assinante não encontrado!' });
         }
-        if (sobrenome) {
-          filtro.sobrenome = sobrenome;
-        }
-        if (cidade) {
-          filtro.cidade = cidade;
-        }
-        if (estado) {
-          filtro.estado = estado;
-        }
-        if (status) {
-          filtro.status = status;
-        }
-        
-        const resultado = await assinanteModel.find(filtro);
-        res.status(200).json(resultado);
       } catch (error) {
-        res.status(500).json({ error: 'Erro ao listar assinante' });
+        res.status(500).json({ error: 'Erro ao buscar assinante' });
       }
     }
+    
+    async  buscarAssinantePorSobrenome(req, res) {
+      const sobrenome = req.params.sobrenome;
+      try {
+        const assinante = await assinanteModel.findOne({ sobrenome: sobrenome });
+        if (assinante) {
+          res.status(200).json(assinante);
+        } else {
+          res.status(404).json({ erro: 'Assinante não encontrado!' });
+        }
+      } catch (error) {
+        res.status(500).json({ error: 'Erro ao buscar assinante' });
+      }
+    }
+    
+    async  buscarAssinantePorCidade(req, res) {
+      const cidade = req.params.cidade;
+      try {
+        const assinante = await assinanteModel.findOne({ cidade: cidade });
+        if (assinante) {
+          res.status(200).json(assinante);
+        } else {
+          res.status(404).json({ erro: 'Assinante não encontrado!' });
+        }
+      } catch (error) {
+        res.status(500).json({ error: 'Erro ao buscar assinante' });
+      }
+    }
+    
+    async buscarAssinantePorEstado(req, res) {
+      const estado = req.params.estado;
+      try {
+        const assinante = await assinanteModel.findOne({ estado: estado });
+        if (assinante) {
+          res.status(200).json(assinante);
+        } else {
+          res.status(404).json({ erro: 'Assinante não encontrado!' });
+        }
+      } catch (error) {
+        res.status(500).json({ error: 'Erro ao buscar assinante' });
+      }
+    }
+    
+    async buscarAssinantePorStatus(req, res) {
+      const status = req.params.status;
+      try {
+        const assinante = await assinanteModel.findOne({ status: status });
+        if (assinante) {
+          res.status(200).json(assinante);
+        } else {
+          res.status(404).json({ erro: 'Assinante não encontrado!' });
+        }
+      } catch (error) {
+        res.status(500).json({ error: 'Erro ao buscar assinante' });
+      }
+    }  
 
     async atualizarAssinante(req, res) {
       const id = req.params.id;
